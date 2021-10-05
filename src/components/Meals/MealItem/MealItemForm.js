@@ -1,18 +1,18 @@
 import Input from "../../UI/Input";
 import styles from "./MealItemForm.module.css";
 
-const MealItemForm = () => {
+const MealItemForm = (props) => {
   return (
     <form className={styles.form}>
       <Input
         label="Amount"
         input={{
-          id: "amount",
+          id: "amount_" + props.id, // this changed!
           type: "number",
           min: "1",
           max: "5",
           step: "1",
-          default: "1",
+          defaultValue: "1",
         }}
       />
       <button>+ Add</button>
